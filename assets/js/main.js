@@ -10,7 +10,7 @@ import { UI } from './ui.js';
 
 window.addEventListener('load', function() {
 
-    document.querySelector('h1').style.display = 'none';
+    document.querySelector('.loading').style.display = 'none';
 
     const canvas = document.getElementById('canvas1');
     const ctx = canvas1.getContext('2d');
