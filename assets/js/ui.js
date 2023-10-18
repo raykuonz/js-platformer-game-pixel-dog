@@ -24,7 +24,7 @@ export class UI {
                context.drawImage(
                   this.livesImage,
                   20 + index * 40,
-                  95,
+                  116,
                   32,
                   32
                );
@@ -55,6 +55,15 @@ export class UI {
          // Timer
          context.font = this.fontSize + 'px ' + this.fontFamily;
          context.fillText(`Time: ` + (this.game.time * 0.001).toFixed(1), 20, 80);
+
+         // Energy
+         context.fillText(`Pow: `, 20, 105);
+         context.fillRect(
+            65,
+            92,
+            this.game.energy / 2, // Energy gauge length
+            16
+         );
 
 
          // Game guides

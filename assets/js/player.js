@@ -86,6 +86,20 @@ export class Player {
             this.frameTimer += deltaTime;
         }
 
+        // Energy management
+        if (this.currentState === this.states[4] || this.currentState === this.states[5]) {
+            if (this.game.energy > 0) {
+                this.game.energy -= this.game.energyConsume;
+            } else {
+                // Enter hit state if energy went empty
+                this.setState(6, 0);
+            }
+        } else {
+            if (this.game.energy < this.game.maxEnergy) {
+                this.game.energy += this.game.energyRecover;
+            }
+        }
+
         this.checkCollision();
     }
 

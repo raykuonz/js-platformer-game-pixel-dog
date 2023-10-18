@@ -42,6 +42,10 @@ window.addEventListener('load', function() {
             this.time = 0;
             this.maxTime = Infinity; // Max time per game
             this.lives = 3;
+            this.energy = 100; // current player energy
+            this.maxEnergy = 100;
+            this.energyConsume = 0.5;
+            this.energyRecover = 0.25;
             this.gameOver = false;
             this.init = false;
             this.player.currentState = this.player.states[0];
